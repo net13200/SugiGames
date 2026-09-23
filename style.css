@@ -1,0 +1,95 @@
+:root {
+  --bg: #fef6e4;
+  --ink: #3a2e5c;
+  --trunk: #8a5a44;
+  --leaf: #2fae64;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: var(--bg);
+  font-family: "Baloo 2", "Comic Sans MS", system-ui, sans-serif;
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.word-sugi { color: var(--trunk); }
+.word-games { color: var(--leaf); }
+
+/* ---------- Landing ---------- */
+
+#landing {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: linear-gradient(160deg, #fef6e4 0%, #e7f6f2 100%);
+  text-align: center;
+  padding: 20px;
+}
+.brand-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 26px;
+  box-shadow: 0 6px 14px rgba(90, 60, 130, 0.18);
+}
+.wordmark {
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: 0.02em;
+}
+.tagline {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--ink);
+  opacity: 0.7;
+}
+
+/* ---------- Splash / loading animation ---------- */
+
+#splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: linear-gradient(160deg, #fef6e4 0%, #e7f6f2 100%);
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+#splash.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#kanji-svg {
+  filter: drop-shadow(0 6px 14px rgba(90, 60, 130, 0.18));
+}
+#brush-tip {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.95));
+}
+
+#splash-word {
+  font-family: "Baloo 2", "Comic Sans MS", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+#splash-word.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
