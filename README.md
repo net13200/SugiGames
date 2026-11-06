@@ -6,7 +6,7 @@ It opens with the kanji-painting splash animation, then shows a portal with ever
 
 - **For little ones** (ages 3–5): SugiPaint, Tune Town, אחת שתיים שלוש
 - **School skills** (grades 1–2): אלף, אינסוף
-- **Puzzles & strategy**: Six Sided Knight, Dancing Chess, Quiver
+- **Puzzles & strategy**: Sugi Chess, Six Sided Knight, Dancing Chess, Quiver
 
 Game icons are copied into `icons/` so the portal doesn't depend on the other sites. To add a game, copy its 192px icon there and add a card to the matching section in `index.html`.
 
