@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>SugiGames</title>
-<meta name="description" content="SugiGames" />
+<meta name="description" content="Calm, colorful games for curious kids: drawing, music, counting, reading, math and puzzles." />
 <meta name="theme-color" content="#ff5e8a" />
 <link rel="icon" href="icon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,8 +43,112 @@
 </div>
 
 <main id="landing">
-  <img class="brand-icon" src="icon.svg" alt="" />
-  <div class="wordmark"><span class="word-sugi">Sugi</span><span class="word-games">Games</span></div>
+  <header class="hero">
+    <img class="brand-icon" src="icon.svg" alt="" width="88" height="88" />
+    <h1 class="wordmark"><span class="word-sugi">Sugi</span><span class="word-games">Games</span></h1>
+    <p class="tagline">Calm, colorful games for curious kids, and a few for the grown-ups too.</p>
+    <nav class="jump" aria-label="Categories">
+      <a href="#little"><span aria-hidden="true">🧸</span> Little ones</a>
+      <a href="#school"><span aria-hidden="true">✏️</span> School skills</a>
+      <a href="#puzzles"><span aria-hidden="true">🧩</span> Puzzles</a>
+    </nav>
+  </header>
+
+  <section class="shelf shelf--little" id="little" aria-labelledby="little-title">
+    <div class="shelf-head">
+      <h2 id="little-title"><span class="shelf-emoji" aria-hidden="true">🧸</span> For little ones</h2>
+      <p>Ages 3–5. Big buttons, no reading needed.</p>
+    </div>
+    <ul class="cards">
+      <li><a class="card" href="https://net13200.github.io/SugiPaint/">
+        <img src="icons/sugipaint.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3>SugiPaint</h3>
+          <p>A bright, simple drawing app with rainbow brushes and stickers.</p>
+          <span class="tag">Drawing</span>
+        </div>
+      </a></li>
+      <li><a class="card" href="https://net13200.github.io/Music-dashboard/">
+        <img src="icons/tune-town.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3>Tune Town</h3>
+          <p>Animal keys, instruments, a drum kit and songs to play along with.</p>
+          <span class="tag">Music</span>
+        </div>
+      </a></li>
+      <li><a class="card" href="https://net13200.github.io/One/">
+        <img src="icons/one.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3 lang="he" dir="rtl">אחת שתיים שלוש</h3>
+          <p>A calm counting game: tap each thing and count out loud.</p>
+          <span class="tag">Counting</span><span class="tag tag--lang">Hebrew · English</span>
+        </div>
+      </a></li>
+    </ul>
+  </section>
+
+  <section class="shelf shelf--school" id="school" aria-labelledby="school-title">
+    <div class="shelf-head">
+      <h2 id="school-title"><span class="shelf-emoji" aria-hidden="true">✏️</span> School skills</h2>
+      <p>Grades 1–2. Practice at your child's own pace.</p>
+    </div>
+    <ul class="cards">
+      <li><a class="card" href="https://net13200.github.io/Aleph/">
+        <img src="icons/aleph.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3 lang="he" dir="rtl">אלף</h3>
+          <p>Learn to read Hebrew: letters, nikud, words and sentences.</p>
+          <span class="tag">Reading</span><span class="tag tag--lang">Hebrew</span>
+        </div>
+      </a></li>
+      <li><a class="card" href="https://net13200.github.io/Math-kids/">
+        <img src="icons/einsof.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3 lang="he" dir="rtl">אינסוף</h3>
+          <p>Math practice: adding, subtracting, friends of 10, odd and even.</p>
+          <span class="tag">Math</span><span class="tag tag--lang">Hebrew</span>
+        </div>
+      </a></li>
+    </ul>
+  </section>
+
+  <section class="shelf shelf--puzzles" id="puzzles" aria-labelledby="puzzles-title">
+    <div class="shelf-head">
+      <h2 id="puzzles-title"><span class="shelf-emoji" aria-hidden="true">🧩</span> Puzzles &amp; strategy</h2>
+      <p>For big kids and grown-ups who like to think.</p>
+    </div>
+    <ul class="cards">
+      <li><a class="card" href="https://net13200.github.io/Six-Sided-Knight/">
+        <img src="icons/six-sided-knight.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3>Six Sided Knight</h3>
+          <p>You're a rolling die in a dungeon. The face you land on is the one that acts.</p>
+          <span class="tag">Puzzle adventure</span>
+        </div>
+      </a></li>
+      <li><a class="card" href="https://net13200.github.io/Pacosaco-fanmade/">
+        <img src="icons/dancing-chess.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3>Dancing Chess</h3>
+          <p>Chess where nothing is captured. Pieces pair up to dance instead.</p>
+          <span class="tag">Board game</span>
+        </div>
+      </a></li>
+      <li><a class="card" href="https://quiver.quest/">
+        <img src="icons/quiver.png" alt="" width="72" height="72" loading="lazy" />
+        <div class="card-body">
+          <h3>Quiver</h3>
+          <p>Learn quantum computing one puzzle at a time.</p>
+          <span class="tag">Science puzzles</span>
+        </div>
+      </a></li>
+    </ul>
+  </section>
+
+  <footer class="foot">
+    <p>Free to play in your browser. Most games keep working offline once opened.</p>
+    <p class="foot-sugi"><span lang="ja">杉</span> Sugi means cedar in Japanese.</p>
+  </footer>
 </main>
 
 <script src="splash.js"></script>

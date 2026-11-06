@@ -1,7 +1,13 @@
 # SugiGames
 
-A companion project to [SugiPaint](https://github.com/net13200/SugiPaint), sharing the same "Sugi" (杉, Japanese for cedar) brand mark.
+The home page for the Sugi family of games, sharing the "Sugi" (杉, Japanese for cedar) brand mark with [SugiPaint](https://github.com/net13200/SugiPaint).
 
-This repo currently holds the kanji-painting loading animation and a placeholder landing page — the same splash animation used in SugiPaint, retitled.
+It opens with the kanji-painting splash animation, then shows a portal with every game, grouped into three categories:
+
+- **For little ones** (ages 3–5): SugiPaint, Tune Town, אחת שתיים שלוש
+- **School skills** (grades 1–2): אלף, אינסוף
+- **Puzzles & strategy**: Six Sided Knight, Dancing Chess, Quiver
+
+Game icons are copied into `icons/` so the portal doesn't depend on the other sites. To add a game, copy its 192px icon there and add a card to the matching section in `index.html`.
 
 Static site, no build step — just open `index.html`.

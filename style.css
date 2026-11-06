@@ -9,42 +9,175 @@
 * { box-sizing: border-box; }
 
 html, body {
-  height: 100%;
   margin: 0;
-  overflow: hidden;
-  overscroll-behavior: none;
   background: var(--bg);
   font-family: "Baloo 2", "Comic Sans MS", system-ui, sans-serif;
   color: var(--ink);
   -webkit-tap-highlight-color: transparent;
 }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 .word-sugi { color: var(--trunk); }
 .word-games { color: var(--leaf); }
 
-/* ---------- Landing ---------- */
+/* ---------- Landing / portal ---------- */
 
 #landing {
-  height: 100dvh;
+  min-height: 100dvh;
+  background: linear-gradient(160deg, #fef6e4 0%, #e7f6f2 100%);
+  padding: max(28px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+}
+#landing > * {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
-  background: linear-gradient(160deg, #fef6e4 0%, #e7f6f2 100%);
   text-align: center;
-  padding: 20px;
+  gap: 6px;
+  padding: 24px 0 36px;
 }
 .brand-icon {
-  width: 96px;
-  height: 96px;
-  border-radius: 26px;
+  width: 88px;
+  height: 88px;
+  border-radius: 24px;
   box-shadow: 0 6px 14px rgba(90, 60, 130, 0.18);
+  margin-bottom: 6px;
 }
 .wordmark {
+  margin: 0;
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: clamp(2.2rem, 7vw, 3rem);
+  line-height: 1.1;
   letter-spacing: 0.02em;
+}
+.tagline {
+  margin: 0;
+  max-width: 30em;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+.jump a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 2px 6px rgba(90, 60, 130, 0.1);
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.jump a:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(90, 60, 130, 0.16); }
+
+/* Category shelves */
+.shelf {
+  --tint: #fff1d6;
+  --accent: #e8913a;
+  margin-bottom: 28px;
+  padding: 22px 20px 24px;
+  border-radius: 28px;
+  background: var(--tint);
+  scroll-margin-top: 16px;
+}
+.shelf--little  { --tint: #ffeef2; --accent: #ff5e8a; }
+.shelf--school  { --tint: #fff4d9; --accent: #e8913a; }
+.shelf--puzzles { --tint: #e9eefc; --accent: #5b6ee1; }
+
+.shelf-head { margin: 0 4px 16px; }
+.shelf-head h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.shelf-emoji { margin-right: 4px; }
+.shelf-head p { margin: 2px 0 0; opacity: 0.75; font-size: 1.02rem; }
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.card {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 22px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(90, 60, 130, 0.08);
+  border: 2px solid transparent;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(90, 60, 130, 0.14);
+  border-color: var(--accent);
+}
+.card:active { transform: translateY(0) scale(0.98); }
+.card:focus-visible, .jump a:focus-visible {
+  outline: 3px solid var(--accent, var(--leaf));
+  outline-offset: 3px;
+}
+.card img {
+  flex: none;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  box-shadow: 0 3px 8px rgba(90, 60, 130, 0.15);
+}
+.card-body { min-width: 0; }
+.card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.card h3[dir="rtl"] { text-align: left; }
+.card p { margin: 4px 0 10px; line-height: 1.35; opacity: 0.85; }
+.tag {
+  display: inline-block;
+  margin: 0 6px 4px 0;
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--tint);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.tag--lang { background: #eef7f1; }
+
+.foot {
+  text-align: center;
+  padding: 12px 0 8px;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+.foot p { margin: 2px 0; }
+
+@media (max-width: 480px) {
+  .shelf { padding: 18px 12px 16px; border-radius: 24px; }
+  .cards { grid-template-columns: 1fr; gap: 12px; }
+  .card img { width: 60px; height: 60px; border-radius: 16px; }
 }
 
 /* ---------- Splash / loading animation ---------- */
