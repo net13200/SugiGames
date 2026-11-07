@@ -146,6 +146,7 @@ html { scroll-behavior: smooth; }
 .shelf--little  { --tint: #ffeef2; --accent: #ff5e8a; }
 .shelf--school  { --tint: #fff4d9; --accent: #e8913a; }
 .shelf--puzzles { --tint: #e9eefc; --accent: #5b6ee1; }
+.shelf--night   { --tint: #f1eafb; --accent: #8a52d6; }
 
 .shelf-head { margin: 0 4px 16px; }
 .shelf-head h2 {
@@ -216,6 +217,29 @@ html { scroll-behavior: smooth; }
   font-weight: 600;
 }
 .tag--lang { background: #eef7f1; }
+
+/* A card with a second link: the title link covers the card, the APK button sits above it */
+.card:has(.card-link) { position: relative; }
+.card-link { color: inherit; text-decoration: none; }
+.card-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.card:has(.card-link:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+.card-link:focus-visible { outline: none; }
+.card .card-actions { margin: 6px 0 0; opacity: 1; }
+.apk-btn {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(90, 60, 130, 0.2);
+}
+.apk-btn:hover { filter: brightness(1.08); }
+.apk-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 
 .foot {
   text-align: center;

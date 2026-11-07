@@ -2,11 +2,12 @@
 
 The home page for the Sugi family of games, sharing the "Sugi" (杉, Japanese for cedar) brand mark with [SugiPaint](https://github.com/net13200/SugiPaint).
 
-It opens with the kanji-painting splash animation, then shows a portal with every game, grouped into three categories:
+It opens with the kanji-painting splash animation, then shows a portal with every game, grouped into four categories:
 
 - **For little ones** (ages 3–5): SugiPaint, Tune Town, אחת שתיים שלוש
 - **School skills** (grades 1–2): אלף, אינסוף
 - **Puzzles & strategy**: Sugi Chess, Six Sided Knight, Dancing Chess, Quiver
+- **Game night**: Commander Tracker (web app, plus an Android APK from its latest GitHub release)
 
 The home-screen icons (`icon-*.png`, `apple-touch-icon.png`) are the 杉 mark only, rendered from `icon.svg` and `icon-maskable.svg`.
 
