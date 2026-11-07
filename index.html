@@ -49,6 +49,11 @@
 
 <main id="landing">
   <header class="hero">
+    <button type="button" class="share-btn" id="share-btn" aria-label="Share SugiGames">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+      <span class="share-label">Share</span>
+    </button>
+    <p class="share-toast" id="share-toast" role="status" aria-live="polite"></p>
     <img class="brand-icon" src="icon.svg" alt="" width="88" height="88" />
     <h1 class="wordmark"><span class="word-sugi">Sugi</span><span class="word-games">Games</span></h1>
     <p class="tagline">Calm, colorful games for curious kids, and a few for the grown-ups too.</p>
@@ -165,5 +170,6 @@
 </main>
 
 <script src="splash.js"></script>
+<script src="share.js"></script>
 </body>
 </html>

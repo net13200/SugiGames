@@ -82,6 +82,57 @@ html { scroll-behavior: smooth; }
 }
 .jump a:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(90, 60, 130, 0.16); }
 
+.hero { position: relative; }
+.share-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px 8px 13px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--leaf);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(47, 174, 100, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.share-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(47, 174, 100, 0.35); }
+.share-btn:active { transform: scale(0.96); }
+.share-btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.share-label { padding-top: 2px; }
+
+.share-toast {
+  position: fixed;
+  left: 50%;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 50;
+  margin: 0;
+  max-width: calc(100% - 32px);
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  opacity: 0;
+  transform: translate(-50%, 12px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.share-toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 480px) {
+  .share-btn { padding: 10px; }
+  .share-label { display: none; }
+}
+
 /* Category shelves */
 .shelf {
   --tint: #fff1d6;
