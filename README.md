@@ -7,7 +7,7 @@ It opens with the kanji-painting splash animation, then shows a portal with ever
 - **For little ones** (ages 3–5): SugiPaint, Tune Town, אחת שתיים שלוש
 - **School skills** (grades 1–2): אלף, אינסוף
 - **Puzzles & strategy**: Sugi Chess, Six Sided Knight, Dancing Chess, Quiver
-- **Game night**: Commander Tracker (web app, plus an Android APK from its latest GitHub release)
+- **Game night**: Commander Tracker (web app, plus an Android APK from its latest GitHub release), Kingdom Ledger (a Kingdom Legacy: Feudal Kingdom companion)
 
 The home-screen icons (`icon-*.png`, `apple-touch-icon.png`) are the 杉 mark only, rendered from `icon.svg` and `icon-maskable.svg`.
 
