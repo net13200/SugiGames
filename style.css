@@ -147,6 +147,7 @@ html { scroll-behavior: smooth; }
 .shelf--school  { --tint: #fff4d9; --accent: #e8913a; }
 .shelf--puzzles { --tint: #e9eefc; --accent: #5b6ee1; }
 .shelf--night   { --tint: #f1eafb; --accent: #8a52d6; }
+.shelf--travel  { --tint: #e3f4ef; --accent: #1f9a82; }
 
 .shelf-head { margin: 0 4px 16px; }
 .shelf-head h2 {
@@ -295,3 +296,6 @@ html { scroll-behavior: smooth; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Baloo 2 draws ō with its macron over the next letter; borrow the system font for that one glyph. */
+.glyph-fix { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
