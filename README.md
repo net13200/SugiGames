@@ -8,7 +8,7 @@ It opens with the kanji-painting splash animation, then shows a portal with ever
 - **School skills** (grades 1–2): אלף, אינסוף
 - **Puzzles & strategy**: Sugi Chess, Six Sided Knight, Dancing Chess, Quiver
 - **Game night**: Commander Tracker (web app, plus an Android APK from its latest GitHub release), Kingdom Ledger (a Kingdom Legacy: Feudal Kingdom companion), Avalon (the hidden-role party game, one phone per player)
-- **Travel tools**: ryōgae 両替 (currency converter for NIS, USD, EUR, SGD, KRW and JPY, with live camera price reading)
+- **Travel tools**: ryōgae 両替 (currency converter for NIS, USD, EUR, SGD, KRW and JPY, with live camera price reading), SugiTalk 話 (live Japanese → English transcript and spoken translation)
 
 The home-screen icons (`icon-*.png`, `apple-touch-icon.png`) are the 杉 mark only, rendered from `icon.svg` and `icon-maskable.svg`.
 
